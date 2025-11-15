@@ -1,0 +1,9 @@
+public class Exercise01_10 {
+
+    public static void main(String[] args) {
+
+        double miles = 14.0 / 1.6;
+        double hours = 45.5 / 60.0;
+        System.out.println(miles / hours);
+    }
+}

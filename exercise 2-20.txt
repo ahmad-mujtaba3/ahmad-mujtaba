@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Exercise02_20 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter balance and interest rate: ");
+        double balance = input.nextDouble();
+        double rate = input.nextDouble();
+        System.out.println(balance * (rate / 1200));
+    }
+}

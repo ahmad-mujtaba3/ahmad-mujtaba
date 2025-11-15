@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Exercise02_01 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Celsius: ");
+        double celsius = input.nextDouble();
+        System.out.println((9.0 / 5) * celsius + 32);
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Exercise03_07 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an amount: ");
+        double amount = input.nextDouble();
+        int cents = (int)(amount * 100);
+        int dollars = cents / 100;
+        cents %= 100;
+        int quarters = cents / 25;
+        cents %= 25;
+        int dimes = cents / 10;
+        cents %= 10;
+        int nickels = cents / 5;
+        cents %= 5;
+        System.out.println("Dollars: " + dollars + " Quarters: " + quarters +
+                           " Dimes: " + dimes + " Nickels: " + nickels + " Pennies: " + cents);
+    }
+}

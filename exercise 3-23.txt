@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Exercise03_23 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter x and y: ");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+        System.out.println(Math.abs(x) <= 5 && Math.abs(y) <= 2.5 ? "Inside" : "Outside");
+    }
+}

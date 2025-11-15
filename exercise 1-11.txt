@@ -1,0 +1,15 @@
+public class Exercise01_11 {
+
+    public static void main(String[] args) {
+
+        double current = 312032486;
+        double year = 365 * 24 * 60 * 60;
+        double birth = year / 7.0;
+        double death = year / 13.0;
+        double immigrant = year / 45.0;
+        for (int i = 1; i <= 5; i++) {
+            current += birth - death + immigrant;
+            System.out.println((int)current);
+        }
+    }
+}

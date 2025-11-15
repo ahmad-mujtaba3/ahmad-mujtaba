@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Exercise04_18 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two characters: ");
+        String s = input.next().toUpperCase();
+        char major = s.charAt(0);
+        char level = s.charAt(1);
+        String majorName = "";
+        if (major == 'M') majorName = "Mathematics";
+        else if (major == 'C') majorName = "Computer Science";
+        else if (major == 'I') majorName = "Information Technology";
+        else {
+            System.out.println("Invalid input");
+            return;
+        }
+        String levelName = "";
+        if (level == '1') levelName = "Freshman";
+        else if (level == '2') levelName = "Sophomore";
+        else if (level == '3') levelName = "Junior";
+        else if (level == '4') levelName = "Senior";
+        else {
+            System.out.println("Invalid input");
+            return;
+        }
+        System.out.println(majorName + " " + levelName);
+    }
+}

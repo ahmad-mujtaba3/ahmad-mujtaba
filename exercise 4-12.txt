@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercise04_12 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a hex digit: ");
+        char ch = Character.toUpperCase(input.next().charAt(0));
+        if (ch >= '0' && ch <= '9') {
+            int n = ch - '0';
+            System.out.println(Integer.toBinaryString(n));
+        } else if (ch >= 'A' && ch <= 'F') {
+            int n = 10 + ch - 'A';
+            System.out.println(Integer.toBinaryString(n));
+        } else
+            System.out.println("Invalid input");
+    }
+}

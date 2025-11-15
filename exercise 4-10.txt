@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Exercise04_10 {
+
+    public static void main(String[] args) {
+
+        int number = (int)(Math.random() * 26) + 65;
+        char letter = (char) number;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Guess an uppercase letter: ");
+        char guess = input.next().toUpperCase().charAt(0);
+        System.out.println(letter == guess ? "Correct!" : "Wrong, it was " + letter);
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Exercise03_27 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter x and y: ");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+        if (x >= 0 && y >= 0 && y <= (-x * 0.5 + 100))
+            System.out.println("Inside");
+        else
+            System.out.println("Outside");
+    }
+}

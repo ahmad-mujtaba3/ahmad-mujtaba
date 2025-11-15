@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Exercise03_14 {
+
+    public static void main(String[] args) {
+
+        int coin = (int)(Math.random() * 2);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Guess 0 for heads or 1 for tails: ");
+        int guess = input.nextInt();
+        System.out.println(coin == guess);
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Exercise03_05 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter today's day (0–6): ");
+        int today = input.nextInt();
+        System.out.print("Enter number of days elapsed: ");
+        int elapsed = input.nextInt();
+        int future = (today + elapsed) % 7;
+        String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        System.out.println("Today is " + days[today] + " and the future day is " + days[future]);
+    }
+}
