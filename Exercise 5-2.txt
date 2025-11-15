@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Exercise05_02 {
+
+    public static void main(String[] args) {
+
+        int correct = 0;
+        long start = System.currentTimeMillis();
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+            int n1 = (int)(Math.random() * 15) + 1;
+            int n2 = (int)(Math.random() * 15) + 1;
+            System.out.print("What is " + n1 + " + " + n2 + "? ");
+            int ans = input.nextInt();
+            if (ans == n1 + n2) correct++;
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Correct count is " + correct);
+        System.out.println("Test time is " + (end - start) / 1000 + " seconds");
+    }
+}

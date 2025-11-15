@@ -1,0 +1,14 @@
+public class Exercise05_36 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String isbn = input.next();
+        int sum = 0;
+        for (int i = 0; i < 9; i++)
+            sum += (isbn.charAt(i) - '0') * (i + 1);
+        int checksum = sum % 11;
+        if (checksum == 10) System.out.println(isbn + "X");
+        else System.out.println(isbn + checksum);
+    }
+}

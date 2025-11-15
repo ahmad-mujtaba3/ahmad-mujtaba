@@ -1,0 +1,12 @@
+public class Exercise05_26 {
+
+    public static void main(String[] args) {
+
+        double e = 1.0, item = 1.0;
+        for (int i = 1; i <= 10000; i++) {
+            item /= i;
+            e += item;
+        }
+        System.out.println(e);
+    }
+}

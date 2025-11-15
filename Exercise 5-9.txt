@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Exercise05_09 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String max1Name = "", max2Name = "";
+        int max1 = 0, max2 = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter name: ");
+            String name = input.next();
+            System.out.print("Enter score: ");
+            int score = input.nextInt();
+            if (score > max1) {
+                max2 = max1;
+                max2Name = max1Name;
+                max1 = score;
+                max1Name = name;
+            } else if (score > max2) {
+                max2 = score;
+                max2Name = name;
+            }
+        }
+        System.out.println("Highest: " + max1Name);
+        System.out.println("Second highest: " + max2Name);
+    }
+}

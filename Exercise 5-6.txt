@@ -1,0 +1,10 @@
+public class Exercise05_06 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Miles   Kilometers   |   Kilometers   Miles");
+        int km = 20;
+        for (int mile = 1; mile <= 10; mile++, km += 5)
+            System.out.printf("%-7d%10.3f   |   %-12d%10.3f%n", mile, mile * 1.609, km, km / 1.609);
+    }
+}

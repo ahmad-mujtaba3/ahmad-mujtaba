@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercise05_32 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int digit1 = (int)(Math.random() * 10);
+        int digit2;
+        do digit2 = (int)(Math.random() * 10); while (digit2 == digit1);
+        int guess = input.nextInt();
+        int g1 = guess / 10;
+        int g2 = guess % 10;
+        if (g1 == digit1 && g2 == digit2) System.out.println("Exact match");
+        else if (g1 == digit2 && g2 == digit1) System.out.println("Match all digits");
+        else if (g1 == digit1 || g1 == digit2 || g2 == digit1 || g2 == digit2) System.out.println("Match one digit");
+        else System.out.println("No match");
+    }
+}

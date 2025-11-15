@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Exercise05_47 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String isbn = input.next();
+        int sum = 0;
+        for (int i = 0; i < 12; i++)
+            sum += (isbn.charAt(i) - '0') * (i % 2 == 0 ? 1 : 3);
+        int check = 10 - sum % 10;
+        if (check == 10) check = 0;
+        System.out.println(isbn + check);
+    }
+}

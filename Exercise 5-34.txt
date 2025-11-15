@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Exercise05_34 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int wins = 0, losses = 0;
+        while (Math.abs(wins - losses) < 3) {
+            int comp = (int)(Math.random() * 3);
+            int user = input.nextInt();
+            if (user == comp) System.out.println("Draw");
+            else if (user == 0 && comp == 2 || user == 1 && comp == 0 || user == 2 && comp == 1) {
+                System.out.println("You win");
+                wins++;
+            } else {
+                System.out.println("You lose");
+                losses++;
+            }
+        }
+    }
+}

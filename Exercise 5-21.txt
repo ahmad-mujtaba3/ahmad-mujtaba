@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercise05_21 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double loan = input.nextDouble();
+        int years = input.nextInt();
+        System.out.println("Rate\tMonthly Payment\tTotal Payment");
+        for (double rate = 5.0; rate <= 8.0; rate += 0.125) {
+            double monthlyRate = rate / 1200;
+            double monthlyPayment = loan * monthlyRate /
+                    (1 - Math.pow(1 + monthlyRate, -years * 12));
+            double total = monthlyPayment * years * 12;
+            System.out.printf("%.3f%%\t%.2f\t\t%.2f%n", rate, monthlyPayment, total);
+        }
+    }
+}

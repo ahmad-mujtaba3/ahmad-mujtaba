@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Exercise05_01 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int positives = 0, negatives = 0, count = 0;
+        double total = 0, number;
+        System.out.print("Enter integers, end with 0: ");
+        while ((number = input.nextDouble()) != 0) {
+            if (number > 0) positives++;
+            else if (number < 0) negatives++;
+            total += number;
+            count++;
+        }
+        if (count == 0) System.out.println("No numbers entered");
+        else System.out.println("Positives: " + positives + " Negatives: " + negatives + " Total: " + total + " Average: " + (total / count));
+    }
+}

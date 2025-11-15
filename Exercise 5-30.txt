@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Exercise05_30 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double amount = input.nextDouble();
+        double rate = input.nextDouble() / 1200;
+        int months = input.nextInt();
+        double total = amount;
+        for (int i = 1; i <= months; i++)
+            total = (total + amount) * (1 + rate);
+        System.out.println(total);
+    }
+}
+}
