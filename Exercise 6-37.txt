@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Exercise06_37 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        int width = input.nextInt();
+        System.out.println(format(number, width));
+    }
+    public static String format(int n, int w) {
+        String s = n + "";
+        while (s.length() < w) s = "0" + s;
+        return s;
+    }
+}

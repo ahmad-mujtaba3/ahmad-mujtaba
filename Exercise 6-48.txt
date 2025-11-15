@@ -1,0 +1,12 @@
+public class Exercise06_48 {
+
+    public static void main(String[] args) {
+
+        System.out.println(format(123.456, 2));
+    }
+    public static String format(double n, int d) {
+        long factor = (long)Math.pow(10, d);
+        long rounded = Math.round(n * factor);
+        return (rounded / factor) + "." + (rounded % factor);
+    }
+}

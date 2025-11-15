@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class DeckOfCards {
+
+    public static void main(String[] args) {
+
+        String[] suits = {"Spades","Hearts","Diamonds","Clubs"};
+        String[] ranks = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
+        int[] deck = new int[52];
+        for(int i=0;i<52;i++) deck[i]=i;
+        Random r = new Random();
+        for(int i=0;i<4;i++){
+            int index = r.nextInt(52-i);
+            int card = deck[index];
+            System.out.println(ranks[card%13]+" of "+suits[card/13]);
+            deck[index] = deck[51-i];
+        }
+    }
+}

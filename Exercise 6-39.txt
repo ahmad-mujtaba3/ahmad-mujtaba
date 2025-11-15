@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Exercise06_39 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String guess = input.next();
+        String answer = input.next();
+        System.out.println(check(guess, answer) ? "Correct" : "Incorrect");
+    }
+    public static boolean check(String guess, String answer) {
+        return guess.equalsIgnoreCase(answer);
+    }
+}

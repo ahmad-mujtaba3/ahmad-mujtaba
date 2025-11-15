@@ -1,0 +1,37 @@
+public class Exercise06_42 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Pay\tTax");
+        for (int pay = 50000; pay <= 60000; pay += 50)
+            System.out.println(pay + "\t" + computeTax(pay));
+    }
+    public static double computeTax(double income) {
+        double tax = 0;
+        double[] brackets = {8350, 33950, 82250, 171550, 372950};
+        double[] rates = {0.10, 0.15, 0.25, 0.28, 0.33, 0.35};
+        if (income <= brackets[0])
+            tax = income * rates[0];
+        else if (income <= brackets[1])
+            tax = brackets[0] * rates[0] + (income - brackets[0]) * rates[1];
+        else if (income <= brackets[2])
+            tax = brackets[0] * rates[0] + (brackets[1] - brackets[0]) * rates[1]
+                    + (income - brackets[1]) * rates[2];
+        else if (income <= brackets[3])
+            tax = brackets[0] * rates[0] + (brackets[1] - brackets[0]) * rates[1]
+                    + (brackets[2] - brackets[1]) * rates[2]
+                    + (income - brackets[2]) * rates[3];
+        else if (income <= brackets[4])
+            tax = brackets[0] * rates[0] + (brackets[1] - brackets[0]) * rates[1]
+                    + (brackets[2] - brackets[1]) * rates[2]
+                    + (brackets[3] - brackets[2]) * rates[3]
+                    + (income - brackets[3]) * rates[4];
+        else
+            tax = brackets[0] * rates[0] + (brackets[1] - brackets[0]) * rates[1]
+                    + (brackets[2] - brackets[1]) * rates[2]
+                    + (brackets[3] - brackets[2]) * rates[3]
+                    + (brackets[4] - brackets[3]) * rates[4]
+                    + (income - brackets[4]) * rates[5];
+        return tax;
+    }
+}

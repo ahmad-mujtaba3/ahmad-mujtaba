@@ -1,0 +1,11 @@
+public class Exercise06_33 {
+
+    public static void main(String[] args) {
+
+        long millis = System.currentTimeMillis();
+        System.out.println(getTotalSeconds(millis));
+    }
+    public static long getTotalSeconds(long millis) {
+        return millis / 1000;
+    }
+}

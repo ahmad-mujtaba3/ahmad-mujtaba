@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Exercise06_41 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int year = input.nextInt();
+        System.out.println(getDays(year) > 0 ? getDays(year) : "Invalid");
+    }
+    public static int getDays(int year) {
+        if (year < 0) return -1;
+        return isLeap(year) ? 366 : 365;
+    }
+    public static boolean isLeap(int y) {
+        return y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+    }
+}

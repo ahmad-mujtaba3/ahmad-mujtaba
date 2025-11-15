@@ -1,0 +1,13 @@
+public class Exercise06_04 {
+
+    public static void main(String[] args) {
+
+        reverse(12345);
+    }
+    public static void reverse(int n) {
+        while (n != 0) {
+            System.out.print(n % 10);
+            n /= 10;
+        }
+    }
+}

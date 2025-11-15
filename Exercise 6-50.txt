@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Exercise06_50 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int n1 = (int)(Math.random() * 100);
+        int n2 = (int)(Math.random() * 100);
+        System.out.println("What is " + n1 + " + " + n2 + "?");
+        int ans = input.nextInt();
+        System.out.println(ans == n1 + n2 ? "Correct" : "Wrong");
+    }
+}

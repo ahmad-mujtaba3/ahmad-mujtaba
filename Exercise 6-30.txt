@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Exercise06_30 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int first = (int)(Math.random() * 6) + 1 + (int)(Math.random() * 6) + 1;
+        System.out.println("You rolled " + first);
+        if (first == 7 || first == 11) {
+            System.out.println("You win");
+            return;
+        }
+        if (first == 2 || first == 3 || first == 12) {
+            System.out.println("You lose");
+            return;
+        }
+        int point = first;
+        System.out.println("Point is " + point);
+        while (true) {
+            int roll = (int)(Math.random() * 6) + 1 + (int)(Math.random() * 6) + 1;
+            System.out.println("You rolled " + roll);
+            if (roll == point) {
+                System.out.println("You win");
+                break;
+            }
+            if (roll == 7) {
+                System.out.println("You lose");
+                break;
+            }
+        }
+    }
+}

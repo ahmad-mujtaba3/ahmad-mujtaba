@@ -1,0 +1,15 @@
+public class Exercise06_35 {
+
+    public static void main(String[] args) {
+
+        final double RADIUS = 6371.01;
+        final double PI = Math.PI;
+        double x1 = Math.toRadians(35.227086);
+        double y1 = Math.toRadians(-80.843126);
+        double x2 = Math.toRadians(32.0835407);
+        double y2 = Math.toRadians(-81.0998342);
+        double d = RADIUS * Math.acos(Math.sin(x1) * Math.sin(x2) + 
+                Math.cos(x1) * Math.cos(x2) * Math.cos(y1 - y2));
+        System.out.println(d);
+    }
+}

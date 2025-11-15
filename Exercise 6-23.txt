@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Exercise06_23 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        String t = input.next();
+        System.out.println(count(s, t));
+    }
+    public static int count(String s, String t) {
+        int c = 0;
+        for (int i = 0; i <= s.length() - t.length(); i++)
+            if (s.substring(i, i + t.length()).equals(t)) c++;
+        return c;
+    }
+}

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Exercise06_08 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double miles = input.nextDouble();
+        System.out.println(milesToKilometers(miles));
+    }
+    public static double milesToKilometers(double miles) {
+        return miles * 1.60934;
+    }
+}

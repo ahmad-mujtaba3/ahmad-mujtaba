@@ -1,0 +1,15 @@
+public class Exercise06_44 {
+
+    public static void main(String[] args) {
+
+        System.out.println("i\tm(i)");
+        for (int i = 1; i <= 100; i++)
+            System.out.println(i + "\t" + m(i));
+    }
+    public static double m(int n) {
+        double sum = 0;
+        for (int i = 1; i <= n; i++)
+            sum += (Math.pow(-1, i + 1)) / i;
+        return sum;
+    }
+}

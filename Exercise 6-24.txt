@@ -1,0 +1,29 @@
+public class Exercise06_24 {
+
+    public static void main(String[] args) {
+
+        long millis = System.currentTimeMillis();
+        System.out.println(getCurrentDate(millis));
+    }
+    public static String getCurrentDate(long millis) {
+        long totalDays = millis / 86400000;
+        int year = 1970;
+        while (true) {
+            int daysInYear = isLeap(year) ? 366 : 365;
+            if (totalDays >= daysInYear) {
+                totalDays -= daysInYear;
+                year++;
+            } else break;
+        }
+        int[] monthDays = {31,isLeap(year)?29:28,31,30,31,30,31,31,30,31,30,31};
+        int month = 0;
+        while (totalDays >= monthDays[month]) {
+            totalDays -= monthDays[month];
+            month++;
+        }
+        return (month + 1) + "/" + (totalDays + 1) + "/" + year;
+    }
+    public static boolean isLeap(int y) {
+        return y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+    }
+}

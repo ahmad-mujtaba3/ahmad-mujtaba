@@ -1,0 +1,17 @@
+public class Exercise06_28 {
+
+    public static void main(String[] args) {
+
+        System.out.println("p\t2^p-1");
+        for (int p = 2; p <= 31; p++) {
+            if (isPrime(p) && isPrime((int)Math.pow(2, p) - 1))
+                System.out.println(p + "\t" + ((int)Math.pow(2, p) - 1));
+        }
+    }
+    public static boolean isPrime(int n) {
+        if (n < 2) return false;
+        for (int i = 2; i <= n / 2; i++)
+            if (n % i == 0) return false;
+        return true;
+    }
+}

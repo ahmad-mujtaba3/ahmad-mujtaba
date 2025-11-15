@@ -1,0 +1,15 @@
+public class Exercise06_45 {
+
+    public static void main(String[] args) {
+
+        System.out.println("i\tm(i)\tm(i) - ln(i+1)");
+        for (int i = 1; i <= 20; i++)
+            System.out.println(i + "\t" + m(i) + "\t" + (m(i) - Math.log(i + 1)));
+    }
+    public static double m(int n) {
+        double sum = 0;
+        for (int i = 1; i <= n; i++)
+            sum += 1.0 / i;
+        return sum;
+    }
+}

@@ -1,0 +1,19 @@
+public class Exercise06_09 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Feet     Meters");
+        for (double f = 1; f <= 10; f++)
+            System.out.printf("%-8.1f%.3f%n", f, footToMeter(f));
+
+        System.out.println("\nMeters   Feet");
+        for (double m = 20; m <= 65; m += 5)
+            System.out.printf("%-8.1f%.3f%n", m, meterToFoot(m));
+    }
+    public static double footToMeter(double f) {
+        return 0.305 * f;
+    }
+    public static double meterToFoot(double m) {
+        return m / 0.305;
+    }
+}

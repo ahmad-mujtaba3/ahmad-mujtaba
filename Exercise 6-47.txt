@@ -1,0 +1,15 @@
+public class Exercise06_47 {
+
+    public static void main(String[] args) {
+
+        System.out.println(dec2Bin(13));
+    }
+    public static String dec2Bin(int n) {
+        String r = "";
+        while (n > 0) {
+            r = (n % 2) + r;
+            n /= 2;
+        }
+        return r;
+    }
+}
